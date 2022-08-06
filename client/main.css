@@ -1,0 +1,95 @@
+@import url(normalize.css);
+@import url(root.css);
+
+#react-target {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+  transition: 0.01s;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--text-header-color);
+}
+
+body {
+  overflow: auto;
+  background-repeat: no-repeat;
+}
+
+header,
+footer {
+  background-color: var(--bg-header-color);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+header p {
+  font-size: 35px;
+  color: var(--text-header-color);
+}
+
+header p span {
+  font-size: 25px;
+}
+
+main {
+  margin: 0 auto;
+  flex: 1 1 auto;
+  display: block;
+}
+
+main section:last-child ul {
+  padding: 10px 0px;
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  column-count: 5;
+  overflow: hidden; /* Fix for firefox and IE 10-11  */
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+  break-inside: avoid-column;
+}
+
+main section:first-child {
+  padding: 20px 0px;
+}
+
+main section:first-child input {
+  margin: 0px 10px;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--bg-lists-color);
+  color: var(--bg-header-color);
+}
+
+main section:last-child ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--bg-lists-color);
+  color: var(--bg-header-color);
+  border-radius: 8px;
+  flex-wrap: nowrap;
+}
+
+footer p {
+  font-size: 25px;
+}
+
+footer p a {
+  color: var(--text-header-color);
+}
